@@ -1,0 +1,125 @@
+$mainColor: #f7c552;
+$secColor: #33c1cf;
+$txtColor: #fff;
+$sectxtColor: #000;
+$mainPadding: 5%;
+
+body {
+  >*>section.cont {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding-inline: $mainPadding;
+  }
+
+  nav {
+    position: fixed;
+    color: $txtColor;
+    top: 0;
+    width: 100vw;
+
+    @media (max-width: 750px) {
+      .toggler {
+        display: flex;
+      }
+    }
+
+    section {
+      padding-block: 30px;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+
+      &::first-letter {
+        color: $mainColor;
+      }
+    }
+
+    a {
+      color: inherit !important;
+      transition: .2s !important;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $mainColor !important;
+      }
+    }
+
+    &.scrolled {
+      color: $sectxtColor;
+      background-color: #fff;
+    }
+
+  }
+
+
+  >section {
+    min-height: 100vh;
+
+    &#Home {
+      background-image: url(../images/banner_bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
+      >.cont {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          color: $txtColor ;
+
+          span {
+            &:first-of-type {
+              color: $mainColor;
+
+            }
+
+            &:last-of-type {
+              color: $secColor;
+
+            }
+          }
+
+        }
+
+        p {
+          width: 80%;
+          color: $txtColor;
+          font-size: 1.4rem;
+          max-width: 450px;
+          text-align: center;
+
+          span {
+            font: {
+              size: 1.2em;
+              weight: 900;
+            }
+          }
+        }
+
+        a {
+          border-radius: 1234px;
+          background-color: #fff;
+          color: #000;
+          padding: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+
+          &:hover {
+            background-color: $secColor;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
